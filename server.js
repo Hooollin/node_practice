@@ -4,12 +4,14 @@ const url = require("url");
 exports.start = function(route, handler) {
   let server = http.createServer((req, res) => {
     let pathname = url.parse(req.url).pathname;
-
-    route(pathname, handler);
-
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.write("hello, world");
-    res.end();
+    let postData = "";
+    req.setEncoding("utf8");
+    req.on("data", function(chunk) {
+      postData += chunk;
+    });
+    req.on("end", () => {
+      route(pathname, handler, res, postData);
+    });
   });
   server.listen(3000);
 
