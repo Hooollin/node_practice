@@ -1,0 +1,20 @@
+{
+  "name": "node_practice",
+  "version": "1.0.0",
+  "description": "hollin praciticing node.js skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hooollin/node_practice.git"
+  },
+  "author": "hollin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hooollin/node_practice/issues"
+  },
+  "homepage": "https://github.com/Hooollin/node_practice#readme"
+}
